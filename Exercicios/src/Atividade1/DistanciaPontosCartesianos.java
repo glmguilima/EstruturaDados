@@ -1,3 +1,5 @@
+package Atividade1;
+
 public class DistanciaPontosCartesianos {
     private double xi,xf,yi,yf;
 

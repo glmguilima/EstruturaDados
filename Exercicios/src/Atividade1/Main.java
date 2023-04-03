@@ -1,3 +1,7 @@
+package Atividade1;
+
+import Atividade1.DistanciaPontosCartesianos;
+
 public class Main {
     public static void main(String[] args) {
         
