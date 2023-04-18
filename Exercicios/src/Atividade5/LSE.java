@@ -7,6 +7,7 @@ public class LSE implements Lista {
     public LSE (){
         this.inicio = null;
     }
+
     public void mostraSE(){
         System.out.println("Lista: ");
         Noh novo = inicio;
@@ -44,19 +45,33 @@ public class LSE implements Lista {
     }
 
     @Override
-    public void estahVazia() {
-
+    public boolean estahVazia() {
+        return inicio == null;
     }
 
     @Override
-    public void remove(int info) {
-
+    public boolean remove(Object info) {
+        Noh ant = null, p;
+        p = inicio;
+        while (p != null && p.getInfo() != info) {
+            ant = p;
+            p = p.getProximo();
+        }
+        if (p == null)
+            return false;
+        if (ant == null)
+            inicio = p.getProximo();
+        else
+            ant.setProximo(p.getProximo());
+        return true;
     }
 
     @Override
     public int tamanho() {
-
-        return 0;
+        int cont = 0;
+        for (Noh i = inicio; i != null; i = i.getProximo())
+            cont ++;
+        return cont;
     }
 
 

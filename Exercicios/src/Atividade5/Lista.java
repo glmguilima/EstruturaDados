@@ -3,8 +3,8 @@ package Atividade5;
 public interface Lista {
     public void insereInicio(Object info);
     public void insereFim (Object info);
-    public void estahVazia();
-    public void remove(int info);
+    public boolean estahVazia();
+    public boolean remove(Object info);
     public int tamanho ();
     void mostraSE();
 }
